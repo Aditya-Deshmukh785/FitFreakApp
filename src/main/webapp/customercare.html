@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Care - FitFreak</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: #1e1e1e;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.7);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            color: #28a745;
+            margin-bottom: 10px;
+        }
+
+        .underline {
+            height: 2px;
+            width: 60px;
+            background: #28a745;
+            margin: 0 auto 30px auto;
+        }
+
+        .info {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            line-height: 1.6em;
+        }
+
+        .highlight {
+            color: #ffa500;
+        }
+
+        .back-btn {
+            margin-top: 30px;
+        }
+
+        .back-btn button {
+            padding: 10px 20px;
+            background-color: #dc3545;
+            border: none;
+            color: white;
+            font-size: 1em;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .back-btn button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Customer Care</h1>
+        <div class="underline"></div>
+
+        <div class="info">
+            For any assistance or queries, feel free to reach out to <strong>Team FitFreak</strong>.<br><br>
+            <span class="highlight">📧 Email:</span> fitfreakyavatmal@gmail.com<br>
+            <span class="highlight">📞 Phone:</span> 1234567890<br><br>
+            <strong>Support Hours:</strong> Monday to Friday, 10:00 AM – 6:00 PM<br>
+            We’re always ready to resolve your problems with dedication!
+        </div>
+
+        <div class="back-btn">
+            <button onclick="window.location.href='login.html'">← Back to Login</button>
+        </div>
+    </div>
+
+</body>
+</html>

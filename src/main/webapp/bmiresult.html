@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your BMI Result</title>
+    <style>
+        body {
+            background: #1a1a1a;
+            color: white;
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #28a745;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #ffa500;
+            margin-bottom: 40px;
+        }
+
+        .plans {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .plan-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .plan-box {
+            background-color: #333;
+            border: 2px solid #28a745;
+            border-radius: 15px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.6);
+            text-align: left;
+        }
+
+        .plan-box h3 {
+            color: #28a745;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .plan-box p {
+            font-size: 0.95em;
+            line-height: 1.4em;
+        }
+
+        .buy-btn {
+            background-color: #28a745;
+            border: none;
+            color: white;
+            padding: 14px 20px;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .buy-btn:hover {
+            background-color: #218838;
+        }
+        
+        .modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  color: #000;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+.modal-content button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.modal-content button:last-child {
+  background-color: #dc3545;
+}
+        
+        
+    </style>
+</head>
+<body>
+    <h1 id="bmiHeading">OK, so your BMI is - </h1>
+    <h2 id="bmiCategory"></h2>
+
+    <div class="plans">
+        <div class="plan-wrapper">
+            <div class="plan-box">
+                <h3>Weight Gain Plan</h3>
+                <p>Designed for those who need to gain healthy muscle mass and bulk up effectively.</p>
+            </div>
+           <button class="buy-btn" onclick="openDialog(1, 'Weight Gain Plan', 500)">Buy ₹500</button>
+        </div>
+
+        <div class="plan-wrapper">
+            <div class="plan-box">
+                <h3>Weight Loss Plan</h3>
+                <p>Perfect for burning fat and getting leaner with cardio-focused and HIIT routines.</p>
+            </div>
+          <button class="buy-btn" onclick="openDialog(2, 'Weight Loss Plan', 500)">Buy ₹500</button>
+        </div>
+
+        <div class="plan-wrapper">
+            <div class="plan-box">
+                <h3>GOKU Plan</h3>
+                <p>For the truly dedicated. Train like a Saiyannn  with hardcore strength & endurance sessions!</p>
+            </div>
+          <button class="buy-btn" onclick="openDialog(3, 'GOKU Plan', 1000)">Buy ₹1000</button>
+
+        </div>
+    </div>
+    
+    <div id="confirmModal" class="modal">
+  <div class="modal-content">
+    <p id="modalText">Are you sure you want to purchase?</p>
+    <button onclick="confirmBuy()">Yes</button>
+    <button onclick="closeModal()">No</button>
+  </div>
+</div>
+
+  
+  <div id="confirmDialog" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%);
+    background:#fff; padding:30px; border-radius:10px; box-shadow:0 4px 20px rgba(0,0,0,0.5); z-index:1000; text-align:center;">
+    <p id="confirmText" style="margin-bottom: 20px; font-weight: bold;"></p>
+    <button onclick="submitPlan()" style="margin-right:10px;">Yes</button>
+    <button onclick="closeDialog()">No</button>
+</div>
+  
+    
+
+  <script>
+let selectedPlanId = null;
+
+function openDialog(planId, planName, price) {
+    selectedPlanId = planId;
+    document.getElementById('modalText').textContent =
+        `Are you sure you want to buy the ${planName} for ₹${price}?`;
+    document.getElementById('confirmModal').style.display = 'flex';
+}
+
+function closeModal() {
+    document.getElementById('confirmModal').style.display = 'none';
+    selectedPlanId = null;
+}
+
+function confirmBuy() {
+    submitPlan();
+    closeModal();
+}
+
+function submitPlan() {
+    if (selectedPlanId !== null) {
+        const form = document.createElement("form");
+        form.method = "POST";
+        form.action = "updatesubscriptionservlet";
+
+        const input = document.createElement("input");
+        input.type = "hidden";
+        input.name = "plan";
+        input.value = selectedPlanId;
+
+        form.appendChild(input);
+        document.body.appendChild(form);
+        form.submit();
+    }
+}
+</script>
+
+
+<script>
+    // Get BMI value from the URL
+    const params = new URLSearchParams(window.location.search);
+    const bmiValue = params.get("bmi");
+
+    if (bmiValue) {
+        document.getElementById("bmiHeading").textContent = `OK, so your BMI is - ${bmiValue}`;
+
+        // Optional: Add category
+        const bmi = parseFloat(bmiValue);
+        let category = "";
+
+        if (bmi < 18.5) category = "Underweight";
+        else if (bmi < 24.9) category = "Normal weight";
+        else if (bmi < 29.9) category = "Overweight";
+        else category = "Obese";
+
+        document.getElementById("bmiCategory").textContent = category;
+    } else {
+        document.getElementById("bmiHeading").textContent = "BMI value not provided.";
+    }
+</script>
+
+
+
+</body>
+</html>

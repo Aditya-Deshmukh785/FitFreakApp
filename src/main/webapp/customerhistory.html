@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Top Customers - FitFreak</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #0f0f0f;
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #28a745;
+            font-size: 2.8em;
+        }
+
+        .underline {
+            height: 4px;
+            width: 120px;
+            background-color: #ffa500;
+            margin: 0 auto 40px auto;
+            border-radius: 5px;
+        }
+
+        .category {
+            margin-bottom: 40px;
+        }
+
+        .category h2 {
+            color: #ffa500;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .customer-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: #1c1c1c;
+            padding: 20px;
+            border-radius: 12px;
+            width: 260px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .name {
+            font-size: 1.3em;
+            margin-bottom: 8px;
+            color: #28a745;
+        }
+
+        .plan {
+            font-size: 1em;
+            color: #dddddd;
+            margin-bottom: 10px;
+        }
+
+        .stars {
+            color: gold;
+            font-size: 1.2em;
+        }
+
+        .back-btn {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .back-btn button {
+            padding: 12px 24px;
+            font-size: 1em;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .back-btn button:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<!-- ... previous content like <html>, <head>, <style> remains the same -->
+
+    <body>
+
+        <div class="container">
+            <h1>Top FitFreak Customers</h1>
+            <div class="underline"></div>
+        
+            <div class="category">
+                <h2>Weight Gain Warriors 💪</h2>
+                <div class="customer-grid">
+                    <div class="card">
+                        <div class="name">Aarav Sharma</div>
+                        <div class="plan">Weight Gain Plan</div>
+                        <div class="stars">★★★★★</div>
+                        <div class="feedback">“The plan helped me bulk up naturally.<br>Love the clean diet and smart workouts.”</div>
+                    </div>
+                    <div class="card">
+                        <div class="name">Rishi Nair</div>
+                        <div class="plan">Weight Gain Plan</div>
+                        <div class="stars">★★★★★</div>
+                        <div class="feedback">“FitFreak made my weight journey so easy!<br>I gained 7kg in 3 months—safely!”</div>
+                    </div>
+                    <div class="card">
+                        <div class="name">Sneha Patil</div>
+                        <div class="plan">Weight Gain Plan</div>
+                        <div class="stars">★★★★★</div>
+                        <div class="feedback">“It gave me confidence & strength.<br>The meal plans were super easy to follow.”</div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="category">
+                <h2>Weight Loss Heroes 🏃‍♂️</h2>
+                <div class="customer-grid">
+                    <div class="card">
+                        <div class="name">Kritika Jain</div>
+                        <div class="plan">Weight Loss Plan</div>
+                        <div class="stars">★★★★★</div>
+                        <div class="feedback">“Lost 12kgs post-lockdown thanks to FitFreak!<br>Simple routines, consistent results.”</div>
+                    </div>
+                    <div class="card">
+                        <div class="name">Vikram Das</div>
+                        <div class="plan">Weight Loss Plan</div>
+                        <div class="stars">★★★★★</div>
+                        <div class="feedback">“The Goku-inspired workouts were 🔥.<br>I dropped fat and built lean muscle!”</div>
+                    </div>
+                    <div class="card">
+                        <div class="name">Maya Verma</div>
+                        <div class="plan">Weight Loss Plan</div>
+                        <div class="stars">★★★★★</div>
+                        <div class="feedback">“Love the diet part, very practical!<br>Workout guides kept me motivated.”</div>
+                    </div>
+                    <div class="card">
+                        <div class="name">Yash Mehta</div>
+                        <div class="plan">Weight Loss Plan</div>
+                        <div class="stars">★★★★★</div>
+                        <div class="feedback">“Tried many apps before, but this one worked.<br>FitFreak is now my daily routine.”</div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="category">
+                <h2>Goku Transformation Legends 🔥</h2>
+                <div class="customer-grid">
+                    <div class="card">
+                        <div class="name">Nikita Rao</div>
+                        <div class="plan">Goku Plan</div>
+                        <div class="stars">★★★★★</div>
+                        <div class="feedback">“From average to athlete in 6 months!<br>The power training blew my mind!”</div>
+                    </div>
+                    <div class="card">
+                        <div class="name">Devansh Kulkarni</div>
+                        <div class="plan">Goku Plan</div>
+                        <div class="stars">★★★★★</div>
+                        <div class="feedback">“Insane results, I feel like a Super Saiyan!<br>This plan is truly next-level.”</div>
+                    </div>
+                    <div class="card">
+                        <div class="name">Sameer Qureshi</div>
+                        <div class="plan">Goku Plan</div>
+                        <div class="stars">★★★★★</div>
+                        <div class="feedback">“The intensity is unmatched.<br>It rebuilt my strength and mindset.”</div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="back-btn">
+                <button onclick="window.location.href='login.html'">← Back to Login</button>
+            </div>
+        </div>
+        
+        </body>
+        </html>
+        

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Account Created - FitFreak</title>
+    <style>
+        body {
+            
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #232526, #414345);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 180px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+            text-align: center;
+            width: 4000px;
+        }
+
+        h1 {
+            color: #28a745;
+            font-size: 2.2em;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.1em;
+            margin-bottom: 25px;
+        }
+
+        a, button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: background 0.3s;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        a:hover, button:hover {
+            background-color: #218838;
+        }
+
+        .bmi-section {
+            margin-top: 30px;
+            text-align: left;
+            display: none;
+        }
+
+        .bmi-section label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        .bmi-section input, .bmi-section select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .bmi-section input, .bmi-section select {
+    width: 250px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+        .bmitext{
+            margin-top: 20px;
+            color: red;
+        }
+        .bmi-section button {
+    display: block;
+    margin: 20px auto 10px auto;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.bmi-section button:hover {
+    background-color: #218838;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Account Created Successfully! 🎉</h1>
+        <p>You're all set to begin your fitness journey with FitFreak.</p>
+        <a href="userlogin.jsp">Go to Login</a>
+
+        <button onclick="toggleBMI()">Calculate Free BMI</button>
+        <p class = "bmitext">You Should know your Bmi index first to start your fitness jouney correctly!</p>
+
+        <div class="bmi-section" id="bmiSection">
+            <h2 style="color:#28a745; text-align:center;">BMI Calculator</h2>
+            <label for="gender">Gender:</label>
+            <select id="gender">
+                <option value="">-- Select --</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" placeholder="Enter your age">
+
+            <label for="height">Height (in cm):</label>
+            <input type="number" id="height" placeholder="Enter height in cm">
+
+            <label for="weight">Weight (in kg):</label>
+            <input type="number" id="weight" placeholder="Enter weight in kg">
+
+            <button onclick="calculateBMI()">Calculate</button>
+            <div class="bmi-result" id="bmiResult"></div>
+        </div>
+    </div>
+
+   <script>
+    function toggleBMI() {
+        const bmiSection = document.getElementById("bmiSection");
+        bmiSection.style.display = (bmiSection.style.display === "none" || bmiSection.style.display === "") ? "block" : "none";
+    }
+
+    function calculateBMI() {
+        const height = parseFloat(document.getElementById("height").value);
+        const weight = parseFloat(document.getElementById("weight").value);
+        const age = parseInt(document.getElementById("age").value);
+        const gender = document.getElementById("gender").value;
+
+        if (!height || !weight || !age || !gender) {
+            alert("Please fill all fields!");
+            return;
+        }
+
+        const heightInMeters = height / 100;
+        const bmi = (weight / (heightInMeters * heightInMeters)).toFixed(2);
+
+        // 🟢 Send BMI as URL parameter
+        window.location.href = "bmiresult.html?bmi=" + encodeURIComponent(bmi);
+
+    }
+
+</script>
+
+
+</body>
+</html>

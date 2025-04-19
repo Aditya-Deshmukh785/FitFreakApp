@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Push Day Routine - FitFreak</title>
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #ffffff;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 40px;
+      position: relative;
+      min-height: 100vh;
+      background-image: radial-gradient(circle at center, #111 0%, #000 100%);
+    }
+
+    h2 {
+      font-size: 2.4em;
+      color: #ff2c2c;
+      text-align: center;
+      margin-bottom: 60px;
+      text-shadow: 0 0 15px #ff2c2c;
+      letter-spacing: 2px;
+    }
+
+    h3.section-title {
+      color: #00ff9f;
+      font-size: 1.6em;
+      margin: 50px 0 20px 20px;
+      border-left: 5px solid #00ff9f;
+      padding-left: 12px;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .exercise-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: flex-start;
+      padding-left: 20px;
+    }
+
+    .exercise-box {
+      background: #1a1a1a;
+      border-radius: 16px;
+      padding: 20px;
+      width: 260px;
+      border: 2px solid #2c2c2c;
+      box-shadow: 0 0 15px rgba(255, 44, 44, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .exercise-box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(255, 44, 44, 0.6);
+    }
+
+    .exercise-box::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255, 44, 44, 0.1) 0%, transparent 80%);
+      transform: rotate(25deg);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .exercise-box p {
+      color: #00ffcc;
+      font-size: 1.1em;
+      margin-bottom: 12px;
+      font-weight: bold;
+      position: relative;
+      z-index: 1;
+    }
+
+    .exercise-box img {
+      display: block;
+      margin: 0 auto 12px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      z-index: 1;
+      position: relative;
+    }
+
+    .sets-reps {
+      color: #ffcc00;
+      font-size: 0.95em;
+      margin-top: 5px;
+      z-index: 1;
+      position: relative;
+    }
+
+    .bottom-buttons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+    }
+
+    .bottom-buttons button {
+      background-color: #ff2c2c;
+      color: white;
+      border: none;
+      padding: 14px 24px;
+      margin-left: 12px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1em;
+      font-weight: bold;
+      text-transform: uppercase;
+      box-shadow: 0 0 10px #ff2c2c;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .bottom-buttons button:hover {
+      background-color: #e60000;
+      transform: scale(1.05);
+    }
+
+    .bottom-buttons .back-btn {
+      background-color: #444;
+      box-shadow: 0 0 10px #888;
+    }
+
+    .bottom-buttons .back-btn:hover {
+      background-color: #333;
+    }
+
+    @media (max-width: 768px) {
+      .exercise-grid {
+        justify-content: center;
+      }
+
+      .exercise-box {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🔥 MONDAY - PUSH DAY (CHEST | TRICEPS | SHOULDERS)</h2>
+
+  <!-- Chest Section -->
+  <h3 class="section-title">Chest</h3>
+  <div class="exercise-grid">
+    <div class="exercise-box">
+      <p>Chest 1</p>
+      <img src="weightgainplan/PUSH/chest/Barbell-Bench-Press.gif" alt="Barbell Bench Press">
+      <div class="sets-reps">Barbell Bench Press</div>
+      <div class="sets-reps">3 sets | 8–12 reps</div>
+    </div>
+    <div class="exercise-box">
+      <p>Chest 2</p>
+      <img src="weightgainplan/PUSH/chest/Incline-Barbell-Bench-Press.gif" alt="Incline Press">
+      <div class="sets-reps">Incline Barbell Press</div>
+      <div class="sets-reps">3 sets | 8–12 reps</div>
+    </div>
+    <div class="exercise-box">
+      <p>Chest 3</p>
+      <img src="weightgainplan/PUSH/chest/Pec-Deck-Fly.gif" alt="Pec Deck Fly">
+      <div class="sets-reps">Pec Deck Fly</div>
+      <div class="sets-reps">3 sets | 10–15 reps</div>
+    </div>
+    <div class="exercise-box">
+      <p>Chest 4</p>
+      <img src="weightgainplan/PUSH/chest/High-Cable-Crossover.gif" alt="Cable Crossover">
+      <div class="sets-reps">High Cable Crossover</div>
+      <div class="sets-reps">3 sets | 12–15 reps</div>
+    </div>
+  </div>
+
+  <!-- Triceps Section -->
+  <h3 class="section-title">Triceps</h3>
+  <div class="exercise-grid">
+    <div class="exercise-box">
+      <p>Triceps 1</p>
+      <img src="weightgainplan/PUSH/tricep/Cable-Tricep-Kickback.gif" alt="Tricep Kickback">
+      <div class="sets-reps">Cable Tricep Kickback</div>
+      <div class="sets-reps">3 sets | 10–15 reps</div>
+    </div>
+    <div class="exercise-box">
+      <p>Triceps 2</p>
+      <img src="weightgainplan/PUSH/tricep/Cable-Rope-Overhead-Triceps-Extension.gif" alt="Overhead Extension">
+      <div class="sets-reps">Rope Overhead Extension</div>
+      <div class="sets-reps">3 sets | 10–12 reps</div>
+    </div>
+  </div>
+
+  <!-- Shoulders Section -->
+  <h3 class="section-title">Shoulders</h3>
+  <div class="exercise-grid">
+    <div class="exercise-box">
+      <p>Shoulders 1</p>
+      <img src="weightgainplan/PUSH/shoulder/Dumbbell-Front-Raise.gif" alt="Front Raise">
+      <div class="sets-reps">Dumbbell Front Raise</div>
+      <div class="sets-reps">3 sets | 10–12 reps</div>
+    </div>
+    <div class="exercise-box">
+      <p>Shoulders 2</p>
+      <img src="weightgainplan/PUSH/shoulder/Barbell-Standing-Military-Press.gif" alt="Military Press">
+      <div class="sets-reps">Barbell Military Press</div>
+      <div class="sets-reps">3 sets | 8–10 reps</div>
+    </div>
+  </div>
+
+<!-- GOKU Section -->
+<h3 class="section-title">Supper Saiyan</h3>
+<div class="exercise-grid">
+    <div class="exercise-box">
+        <p>Exercise 1</p>
+        <img src="weightgainplan/ADVANCE/Captains-Chair-Leg-Raise.gif" alt="Supper Saiyan">
+        <div class="sets-reps">Captains-Chair-Leg-Raise</div>
+        <div class="sets-reps">2 sets | 8–12 reps</div>
+    </div>
+    <div class="exercise-box">
+        <p>Exercise 2</p>
+        <img src="weightgainplan/ADVANCE/Clap-Push-Up.gif" alt="Supper Saiyan">
+        <div class="sets-reps">Clap-Push-Up</div>
+        <div class="sets-reps">2 sets | 8–12 reps</div>
+    </div>
+    <div class="exercise-box">
+        <p>Exercise 3</p>
+        <img src="weightgainplan//ADVANCE/Full-Planche.gif" alt="Cardio 3">
+        <div class="sets-reps">Full-Planche</div>
+        <div class="sets-reps">HOLD | 1-2 Mins</div>
+    </div>
+</div>
+  <!-- Bottom Buttons -->
+  <div class="bottom-buttons">
+    <button class="back-btn" onclick="window.location.href='Gokuplan.html'">Back</button>
+    <button onclick="window.location.href='login.html'">Logout</button>
+  </div>
+
+</body>
+</html>

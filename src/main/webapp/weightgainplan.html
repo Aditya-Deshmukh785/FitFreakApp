@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weight Gain Plan - FitFreak</title>
+  
+  <style>
+    body {
+      background: #1a1a1a;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #28a745;
+      font-size: 2.2em;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #ffa500;
+      margin: 30px 0 15px 20px;
+      text-align: left;
+      font-size: 1.6em;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding-left: 20px;
+    }
+
+    .btn {
+      background-color: #28a745;
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      font-size: 1.1em;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      min-width: 150px;
+    }
+
+    .btn:hover {
+      background-color: #218838;
+    }
+    
+    .logout-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  background-color: #dc3545;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #c82333;
+}
+    
+  </style>
+</head> 
+<center>
+ <img src="entrylogin.jpg" alt="Image of Motivation" height="300" width="600px">
+</center>
+<body>
+
+ <a href="login.html" class="logout-btn">Logout</a>
+ 
+
+  <h1 id="welcomeText">Welcome to your Weight Gain Plan!</h1>
+
+  <h2>🏋️ Weekly Routine</h2>
+  <div class="btn-group">
+    <button class="btn"  onclick="window.location.href='Mondayweightgain.html'">Monday</button>
+    <button class="btn" onclick="window.location.href='tuesdayweightgain.html'">Tuesday</button>
+    <button class="btn" onclick="window.location.href='wednesdayweightgain.html'">Wednesday</button>
+    <button class="btn" onclick="window.location.href='thursdayweightgain.html'">Thursday</button>
+    <button class="btn" onclick="window.location.href='fridayweightgain.html'">Friday</button>
+    <button class="btn"onclick="window.location.href='saturdayweightgain.html'">Saturday</button>
+  </div>
+
+  <h2>🍽️ Diet Plan</h2>
+  <div class="btn-group">
+    <button class="btn"  onclick="window.location.href='Dietweightgain.html'">View Diet Plan</button>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const uname = params.get("uname");
+    if (uname) {
+      document.getElementById("welcomeText").textContent =
+        `Welcome ${uname}, to your Weight Loss Plan!`;
+    }
+  </script>
+
+</body>
+</html>

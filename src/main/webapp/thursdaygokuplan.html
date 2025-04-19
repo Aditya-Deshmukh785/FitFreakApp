@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Push Day Routine - FitFreak</title>
+  <style>
+    body {
+      background: radial-gradient(circle, #0f0f0f, #000);
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 40px;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    h2 {
+      font-size: 2.2em;
+      color: #00ff9f;
+      text-align: center;
+      margin-bottom: 50px;
+      text-shadow: 0 0 12px #00ff9f;
+      letter-spacing: 2px;
+    }
+
+    h3.section-title {
+      color: #ff2c2c;
+      font-size: 1.6em;
+      margin: 40px 0 20px 20px;
+      text-transform: uppercase;
+      text-shadow: 0 0 8px #ff2c2c;
+    }
+
+    .exercise-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: flex-start;
+      padding-left: 20px;
+    }
+
+    .exercise-box {
+      background-color: #333;
+      border-radius: 12px;
+      padding: 15px;
+      width: 250px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.5);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .exercise-box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 12px #00ffd5;
+    }
+
+    .exercise-box p {
+      color: #28a745;
+      font-size: 1em;
+      margin-bottom: 10px;
+    }
+
+    .exercise-box img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .sets-reps {
+      color: #3399ff;
+      font-size: 0.95em;
+      margin-top: 10px;
+    }
+
+    .bottom-buttons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 99;
+    }
+
+    .bottom-buttons button {
+      background-color: #dc3545;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin-left: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1em;
+      box-shadow: 0 0 10px #dc3545;
+      transition: all 0.3s ease;
+    }
+
+    .bottom-buttons button:hover {
+      background-color: #b3001b;
+      transform: scale(1.05);
+    }
+
+    .bottom-buttons .back-btn {
+      background-color: #6c757d;
+      box-shadow: 0 0 10px #6c757d;
+    }
+
+    .bottom-buttons .back-btn:hover {
+      background-color: #5a6268;
+    }
+
+    @media (max-width: 768px) {
+      .exercise-grid {
+        justify-content: center;
+      }
+
+      .exercise-box {
+        width: 90%;
+      }
+
+      .bottom-buttons {
+        right: 10px;
+        left: 10px;
+        justify-content: space-between;
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Thursday - Push Day (Chest | Triceps | Shoulders)</h2>
+
+  <!-- Chest Section -->
+  <h3 class="section-title">Chest</h3>
+  <div class="exercise-grid">
+    <div class="exercise-box">
+      <p>Chest 1</p>
+      <img src="weightgainplan/PUSH/chest/Dumbbell-Press-1.gif" alt="Chest Exercise">
+      <div class="sets-reps">Dumbbell-Press-</div>
+      <div class="sets-reps">3 sets | 8–12 reps</div>
+    </div>
+    <div class="exercise-box">
+      <p>Chest 2</p>
+      <img src="weightgainplan/PUSH/chest/Decline-Dumbbell-Press.gif" alt="Chest 2">
+      <div class="sets-reps">Decline-Dumbbell-Press</div>
+      <div class="sets-reps">3 sets | 8–12 reps</div>
+    </div>
+    <div class="exercise-box">
+      <p>Chest 3</p>
+      <img src="weightgainplan/PUSH/chest/Dumbbell-Fly.gif" alt="Chest 3">
+      <div class="sets-reps">Dumbbell-Fly</div>
+      <div class="sets-reps">3 sets | 8–12 reps</div>
+    </div>
+    <div class="exercise-box">
+      <p>Chest 4</p>
+      <img src="weightgainplan/PUSH/chest/Low-Cable-Crossover.gif" alt="Chest 4">
+      <div class="sets-reps">Low-Cable-Crossover</div>
+      <div class="sets-reps">3 sets | 8–12 reps</div>
+    </div>
+  </div>
+
+  <!-- Triceps Section -->
+  <h3 class="section-title">Triceps</h3>
+  <div class="exercise-grid">
+    <div class="exercise-box">
+      <p>Triceps 1</p>
+      <img src="weightgainplan/PUSH/tricep/Pushdown.gif" alt="Chest 4">
+      <div class="sets-reps">Pushdown</div>
+      <div class="sets-reps">3 sets | 8–12 reps</div>
+    </div>
+    <div class="exercise-box">
+      <p>Triceps 2</p>
+      <img src="weightgainplan/PUSH/tricep/Barbell-Triceps-Extension.gif" alt="Chest 4">
+      <div class="sets-reps">Barbell-Triceps-Extension.gif</div>
+      <div class="sets-reps">3 sets | 8–12 reps</div>
+    </div>
+  </div>
+
+  <!-- Shoulders Section -->
+  <h3 class="section-title">Shoulders</h3>
+  <div class="exercise-grid">
+    <div class="exercise-box">
+      <p>Shoulders 1</p>
+      <img src="weightgainplan/PUSH/shoulder/Dumbbell-Lateral-Raise.gif" alt="Chest 4">
+      <div class="sets-reps">Dumbbell-Lateral-Raise</div>
+      <div class="sets-reps">3 sets | 8–12 reps</div>
+    </div>
+    <div class="exercise-box">
+      <p>Shoulders 2</p>
+      <img src="weightgainplan/PUSH/shoulder/Face-Pull.gif" alt="Chest 4">
+      <div class="sets-reps">Face-Pull</div>
+      <div class="sets-reps">3 sets | 8–12 reps</div>
+    </div>
+  </div>
+<!-- GOKU Section -->
+<h3 class="section-title">Supper Saiyan</h3>
+<div class="exercise-grid">
+    <div class="exercise-box">
+        <p>Exercise 1</p>
+        <img src="weightgainplan/ADVANCE/Swing-360.gif" alt="Supper Saiyan">
+        <div class="sets-reps">Swing-360</div>
+        <div class="sets-reps">2 sets  </div>
+    </div>
+    <div class="exercise-box">
+        <p>Exercise 2</p>
+        <img src="weightgainplan/ADVANCE/Weighted-Lying-Neck-Extension.gif" alt="Supper Saiyan">
+        <div class="sets-reps">Weighted-Lying-Neck-Extension</div>
+        <div class="sets-reps">2 sets | 8–12 reps</div>
+    </div>
+    <div class="exercise-box">
+        <p>Exercise 3</p>
+        <img src="weightgainplan//ADVANCE/Weighted-Pull-up.gif" alt="Cardio 3">
+        <div class="sets-reps">Weighted-Pull-up</div>
+        <div class="sets-reps">2 sets | 8–12 reps</div>
+    </div>
+</div>
+
+  <!-- Buttons -->
+  <div class="bottom-buttons">
+    <button class="back-btn" onclick="window.location.href='Gokuplan.html'">Back</button>
+    <button onclick="window.location.href='login.html'">Logout</button>
+  </div>
+
+</body>
+</html>

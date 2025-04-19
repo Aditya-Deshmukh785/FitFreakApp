@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New User Registration - FitFreak</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #1f4037, #99f2c8);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .register-container {
+            background-color: #ffffffd9;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+            width: 400px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        input[type="password"] {
+            width: 90%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .error {
+            color: red;
+            font-size: 0.9em;
+            margin-top: -8px;
+            margin-bottom: 8px;
+            text-align: left;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #submitBtn {
+            width: 95%;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            display: none;
+        }
+
+        #submitBtn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="register-container">
+        <h2>Create Your FitFreak Account</h2>
+        <form id="registerForm" action="newuserlogin" method="post">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+            <div id="phoneError" class="error"></div>
+
+            <input type="number" name="weight" placeholder="Weight (kg)" required>
+            <input type="text" name="username" placeholder="Choose a Username" required>
+            <input type="password" id="password" name="password" placeholder="Create a Password" required>
+            <div id="passwordError" class="error"></div>
+
+            <input type="submit" value="Create Account" id="submitBtn">
+        </form>
+    </div>
+
+    <script>
+        const phoneInput = document.getElementById("phone");
+        const passwordInput = document.getElementById("password");
+        const phoneError = document.getElementById("phoneError");
+        const passwordError = document.getElementById("passwordError");
+        const submitBtn = document.getElementById("submitBtn");
+
+        function validateInputs() {
+            let phoneValid = /^\d{10}$/.test(phoneInput.value.trim());
+            let passwordValid = /\d/.test(passwordInput.value.trim());
+
+            // Update phone error
+            if (!phoneValid) {
+                phoneError.textContent = "Phone number must be exactly 10 digits.";
+            } else {
+                phoneError.textContent = "";
+            }
+
+            // Update password error
+            if (!passwordValid) {
+                passwordError.textContent = "Password must contain at least one number.";
+            } else {
+                passwordError.textContent = "";
+            }
+
+            // Show submit button only if both are valid
+            if (phoneValid && passwordValid) {
+                submitBtn.style.display = "block";
+            } else {
+                submitBtn.style.display = "none";
+            }
+        }
+
+        phoneInput.addEventListener("input", validateInputs);
+        passwordInput.addEventListener("input", validateInputs);
+    </script>
+
+</body>
+</html>
+s

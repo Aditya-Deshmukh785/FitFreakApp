@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard - FitFreak</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #111112, #24272a);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+      position: relative;
+    }
+
+    h1 {
+      margin-top: 60px;
+      font-size: 2.5em;
+      color: #d79609;
+      text-align: center;
+    }
+
+    .options-container {
+      margin-top: 60px;
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+    }
+
+    .option-box {
+      background-color: #1e1e1e;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(147, 12, 12, 0.6);
+      text-align: center;
+      transition: transform 0.2s ease;
+      cursor: pointer;
+    }
+
+    
+
+    .option-box a {
+      text-decoration: none;
+      color: #00ff15;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+    .logout-btn {
+      position: absolute;
+      bottom: 20px;
+      right: 30px;
+      background-color: #dc3545;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    .logout-btn:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Admin Dashboard</h1>
+
+  <div class="options-container">
+    <div class="option-box">
+      <a href="showuserdata">Show User Data</a>
+    </div>
+    <div class="option-box">
+      <a href="subscriptionplandetails">Show Subscription Details</a>
+    </div>
+  </div>
+
+  <button class="logout-btn" onclick="window.location.href='login.html'">Logout</button>
+
+</body>
+</html>

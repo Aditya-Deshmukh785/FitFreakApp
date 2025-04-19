@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to FitFreak</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: white;
+            display: flex;
+            height: 100vh;
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        img {
+            max-width: 90%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+
+        .login-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .login-buttons a {
+            text-decoration: none;
+            padding: 15px 30px;
+            background-color: #28a745;
+            color: white;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: background 0.3s;
+        }
+
+        .login-buttons a:hover {
+            background-color: #218838;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .sidebar h3 {
+            margin-bottom: 20px;
+            font-size: 1.4em;
+            border-bottom: 2px solid white;
+            padding-bottom: 5px;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            margin: 10px 0;
+            font-size: 1em;
+            transition: color 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #28a745;
+        }
+        
+       
+    </style>
+</head>
+<body>
+
+    <!-- Main Content Section -->
+    <div class="main-content">
+        <img src="entrylogin.jpg" alt="Image of Motivation" height="400px" width="900px">
+        <h1>Welcome to FitFreak 💪</h1>
+        <p>Your journey to fitness begins here!</p>
+        <div class="login-buttons">
+            <a href="userlogin.jsp">User Login</a>
+            <a href="adminlogin.jsp">Admin Login</a>
+        </div>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <h3>Quick Links</h3>
+        <a href="aboutfitfreak.html">About</a>
+        <a href="customerhistory.html">Customer History</a>
+        <a href="feestructure">Fee Structure</a>
+        
+        <a href="customercare.html">Customer Care </a>
+    </div>
+
+</body>
+</html>

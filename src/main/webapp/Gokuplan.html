@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Goku Plan - FitFreak</title>
+  <style>
+    body {
+      background: radial-gradient(circle, #0f0f0f, #000);
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px;
+      margin: 0;
+    }
+
+    h1 {
+      color: #00ff9f;
+      font-size: 2.4em;
+      margin-bottom: 40px;
+      text-align: center;
+      text-shadow: 0 0 15px #00ff9f;
+      letter-spacing: 2px;
+    }
+
+    h2 {
+      color: #ff2c2c;
+      margin: 40px 0 20px 20px;
+      text-align: left;
+      font-size: 1.8em;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-shadow: 0 0 8px #ff2c2c;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding-left: 20px;
+    }
+
+    .btn {
+      background-color: #111;
+      border: 2px solid #00ff9f;
+      color: #00ff9f;
+      padding: 16px 32px;
+      font-size: 1.1em;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      min-width: 150px;
+      text-transform: uppercase;
+      box-shadow: 0 0 12px rgba(0, 255, 159, 0.3);
+    }
+
+    .btn:hover {
+      background-color: #00ff9f;
+      color: black;
+      box-shadow: 0 0 20px #00ff9f;
+    }
+
+    .logout-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      background-color: #ff2c2c;
+      color: white;
+      padding: 12px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s;
+      box-shadow: 0 0 10px #ff2c2c;
+    }
+
+    .logout-btn:hover {
+      background-color: #cc0000;
+      transform: scale(1.05);
+    }
+
+    .expert-section {
+      background-color: #1f1f1f;
+      border-left: 6px solid #00ff9f;
+      margin: 40px 20px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 255, 159, 0.3);
+    }
+
+    .expert-section h3 {
+      color: #7ee787;
+      margin-bottom: 10px;
+      font-size: 1.4em;
+      text-transform: uppercase;
+    }
+
+    .expert-section p {
+      font-size: 1.1em;
+      margin: 8px 0;
+    }
+
+    .header-img {
+      display: block;
+      margin: 0 auto 40px auto;
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #ff2c2c;
+    }
+
+    @media (max-width: 768px) {
+      .btn-group {
+        justify-content: center;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <img src="goku1.jpg" alt="Image of Motivation" class="header-img" height="300" width="600">
+
+  <a href="login.html" class="logout-btn">Logout</a>
+
+  <h1 id="welcomeText">Welcome to your Goku Plan!</h1>
+
+  <h2>🏋️ Weekly Routine</h2>
+  <div class="btn-group">
+    <button class="btn" onclick="window.location.href='mondaygokuplan.html'">Monday</button>
+    <button class="btn" onclick="window.location.href='tuesdaygokuplan.html'">Tuesday</button>
+    <button class="btn" onclick="window.location.href='wednesdaygokuplan.html'">Wednesday</button>
+    <button class="btn" onclick="window.location.href='thursdaygokuplan.html'">Thursday</button>
+    <button class="btn" onclick="window.location.href='fridaygokuplan.html'">Friday</button>
+    <button class="btn" onclick="window.location.href='saturdaygokuplan.html'">Saturday</button>
+  </div>
+
+  <h2>🍽️ Diet Plan</h2>
+  <div class="btn-group">
+    <button class="btn" onclick="window.location.href='Dietgokuplan.html'">View Diet Plan</button>
+  </div>
+
+  <!-- Expert Section -->
+  <div class="expert-section">
+    <h3>👨‍⚕️ Assigned Expert</h3>
+    <p><strong>Name:</strong> Shivraj Shahajirao Bhosle</p>
+    <p><strong>Contact:</strong> +91 98765 43210</p>
+    <p><strong>Specialization:</strong> Advanced Strength Training & Nutrition</p>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const uname = params.get("uname");
+    if (uname) {
+      document.getElementById("welcomeText").textContent = `Welcome ${uname}, to your Goku Plan!`;
+    }
+  </script>
+
+</body>
+</html>
