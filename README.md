@@ -7,7 +7,7 @@ Welcome to **FitFreak**, a full-stack Java-based web application designed to mak
 
 ## 📌 About the Project
 
-FitFreak started as a vision during the COVID-19 lockdown, when our creator — a certified gym trainer — noticed the need for digital fitness solutions. With over 5 years of offline experience and a successful gym in Yavatmal, Maharashtra, FitFreak was born to bring that same transformation online.
+FitFreak started as a vision during the COVID-19 lockdown, when our creator  noticed the need for digital fitness solutions. With over 5 years of offline experience and a successful gym in Yavatmal, Maharashtra, FitFreak was born to bring that same transformation online.
 
 This platform guides users through a journey of fitness by offering personalized plans, BMI tracking, diet charts, and an admin dashboard for backend data access.
 
